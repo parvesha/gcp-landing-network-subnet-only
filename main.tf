@@ -1,3 +1,10 @@
+provider "google" {
+ credentials = "${GC_KEY}}"
+ project     = "stellar-lock-347017"
+ region      = "us-central1"
+}
+
+
 resource "google_compute_network" "greenfield-vpc" {
   name                            = "${var.network_name}-${var.env_name}"
   project                         = var.project_id
